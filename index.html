@@ -1,95 +1,12 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M2D Beauty Shop</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome untuk Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="logo">M2D</div>
-        <nav class="nav-links">
-            <a href="#" class="active">Home</a>
-            <a href="#">Shop</a>
-            <a href="#">Payment</a>
-        </nav>
-        <div class="cart-icon" onclick="toggleCart()">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count">0</span>
-        </div>
-    </header>
-
-    <!-- HERO / BANNER SEARCH -->
-    <section class="hero-section">
-        <div class="search-container">
-            <i class="fas fa-search search-icon"></i>
-            <input type="text" placeholder="Search product here...">
-        </div>
-    </section>
-
-    <!-- MAIN CONTENT CONTAINER -->
-    <main class="main-container">
-        <!-- SIDEBAR KATEGORI -->
-        <aside class="sidebar">
-            <h3>Categories</h3>
-            <ul>
-                <li class="active" onclick="filterCategory('all')">All Products</li>
-                <li onclick="filterCategory('makeup')">Make Up</li>
-                <li onclick="filterCategory('skincare')">Skincare</li>
-            </ul>
-        </aside>
-
-        <!-- PRODUCT GRID -->
-        <section class="products-grid" id="product-list">
-            <!-- Produk akan di-render via JavaScript -->
-        </section>
-    </main>
-
-    <!-- MODAL DETAIL PRODUK -->
-    <div class="modal" id="product-modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div class="modal-body">
-                <div class="modal-img">
-                    <img id="modal-product-img" src="" alt="Product Image">
-                </div>
-                <div class="modal-details">
-                    <h2 id="modal-product-name">Product Name</h2>
-                    <p class="brand" id="modal-product-brand">Brand</p>
-                    <p class="price" id="modal-product-price">Rp 0</p>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="description">Formula lembut yang merawat kulit Anda sepanjang hari dengan kelembaban ekstra.</p>
-                    <button class="btn-primary" id="add-to-cart-btn">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- SIDE CART SLIDEOUT -->
-    <div class="cart-sidebar" id="cart-sidebar">
-        <div class="cart-header">
-            <h2>Your Cart</h2>
-            <span class="close-cart" onclick="toggleCart()">&times;</span>
-        </div>
-        <div class="cart-items" id="cart-items-container">
-            <!-- Item keranjang di sini -->
-        </div>
-        <div class="cart-footer">
-            <div class="total-price">
-                <span>TOTAL:</span>
-                <span id="cart-total-price">Rp 0</span>
-            </div>
-            <button class="btn-checkout" onclick="processCheckout()">Checkout</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+  <div class="cover"><img class="md" src="https://c.animapp.com/mrhb772qAUeVUu/img/m2d-2-1.png" /></div>
 </body>
 </html>
