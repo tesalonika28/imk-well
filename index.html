@@ -1,207 +1,213 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M2D Shop Prototype - 12 Products</title>
-    <!-- Menghubungkan ke file CSS (Pastikan file style.css ada di folder yang sama) -->
+    <title>MPD Cosmetics Store</title>
+    <!-- Menghubungkan ke file CSS eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- NAVBAR -->
+    <div class="app-container">
+        
+        <!-- HEADER UTAMA NAVBAR -->
         <div class="navbar">
-            <div class="logo">M2D</div>
-            <div class="nav-links">
-                <button class="nav-btn active" onclick="switchView('shop')">Home</button>
-                <button class="nav-btn" onclick="switchView('shop')">Shop</button>
-                <button class="nav-btn" onclick="switchView('checkout')">Payment</button>
+            <div class="logo" onclick="navigateTo('home')">MPD</div>
+            <div class="nav-menu">
+                <div class="nav-item active" id="nav-home" onclick="navigateTo('home')">Home</div>
+                <div class="nav-item" id="nav-shop" onclick="navigateTo('shop')">Shop</div>
+                <div class="nav-item" id="nav-cart" onclick="navigateTo('cart')">Cart</div>
             </div>
-            <div class="cart-icon" onclick="switchView('checkout')">🛒 <span id="cart-count">1</span></div>
+            <div style="width: 40px;"></div>
         </div>
 
-        <!-- VIEW 1: KATALOG 12 PRODUK -->
-        <div id="view-shop" class="view active">
-            <h2 class="section-title">Katalog Produk Kecantikan</h2>
-            <div class="grid-products">
+        <!-- ================= SCREEN 1: HOME ================= -->
+        <div id="screen-home" class="app-screen active">
+            <div class="home-content">
+                <input type="text" class="search-bar" placeholder="🔍 Search">
                 
-                <!-- Produk 1 -->
-                <div class="product-card">
-                    <img src="bnb 1.jpeg" alt="barenbliss Lip Tint 01" onerror="this.src='https://via.placeholder.com/130x130/ffb7c5/ffffff?text=BNB+Lip+Tint+01'">
-                    <div class="product-title">barenbliss Peach Make Perfect Lip Tint (Paradise Found)</div>
-                    <div class="product-price">Rp 72.900</div>
-                    <button class="btn-action" onclick="buyProduct('barenbliss Peach Make Perfect Lip Tint (Paradise Found)', 72900, 'bnb_lip_tint_1.png')">Beli Sekarang</button>
+                <div class="banner-container">
+                    <div class="banner-card" style="background-image: url('https://picsum.photos/seed/makeup/400/300');" onclick="navigateTo('shop')">
+                        <div class="banner-title">make up</div>
+                    </div>
+                    <div class="banner-card" style="background-image: url('https://picsum.photos/seed/skincare/400/300');" onclick="navigateTo('shop')">
+                        <div class="banner-title">skincare</div>
+                    </div>
                 </div>
 
-                <!-- Produk 2 -->
-                <div class="product-card">
-                    <img src="bnb2.jpeg" alt="barenbliss Lip Tint 02" onerror="this.src='https://via.placeholder.com/130x130/ff69b4/ffffff?text=BNB+Lip+Tint+02'">
-                    <div class="product-title">barenbliss Peach Make Perfect Lip Tint (Pretty Please)</div>
-                    <div class="product-price">Rp 72.900</div>
-                    <button class="btn-action" onclick="buyProduct('barenbliss Peach Make Perfect Lip Tint (Pretty Please)', 72900, 'bnb_lip_tint_2.png')">Beli Sekarang</button>
+                <div class="brand-section">
+                    <div class="brand-logo">Emina</div>
+                    <div class="brand-logo" style="background-color: #f48fb1; color: white;">barenbliss</div>
+                    <div class="brand-logo" style="background-color: #ff3366; color: white;">Glad2Glow</div>
+                    <div class="brand-logo">GRACE AND GLOW</div>
+                    <div class="brand-logo">Implora</div>
+                    <div class="brand-logo dark">SCARLETT</div>
                 </div>
-
-                <!-- Produk 3 -->
-                <div class="product-card">
-                    <img src="bnb3.jpeg" alt="barenbliss Lip Tint 03" onerror="this.src='https://via.placeholder.com/130x130/ffb7c5/ffffff?text=BNB+Lip+Tint+03'">
-                    <div class="product-title">barenbliss Peach Make Perfect Lip Tint (Take Change)</div>
-                    <div class="product-price">Rp 72.900</div>
-                    <button class="btn-action" onclick="buyProduct('barenbliss Peach Make Perfect Lip Tint (Take Change)', 72900, 'bnb_lip_tint_3.png')">Beli Sekarang</button>
-                </div>
-
-                <!-- Produk 4 -->
-                <div class="product-card">
-                    <img src="bnb 4.jpeg" alt="barenbliss Lip Tint 04" onerror="this.src='https://via.placeholder.com/130x130/ffc0cb/ffffff?text=BNB+Lip+Tint+04'">
-                    <div class="product-title">barenbliss Peach Make Perfect Lip Tint (Never Settle)</div>
-                    <div class="product-price">Rp 72.900</div>
-                    <button class="btn-action" onclick="buyProduct('barenbliss Peach Make Perfect Lip Tint (Never Settle)', 72900, 'bnb_lip_tint_4.png')">Beli Sekarang</button>
-                </div>
-
-                <!-- Produk 5 -->
-                <div class="product-card">
-                    <img src="scarlet serum.jpeg" alt="Scarlett Serum" onerror="this.src='https://via.placeholder.com/130x130/ffb7c5/ffffff?text=Scarlett+Serum'">
-                    <div class="product-title">Scarlett Brightly Ever After Serum (Phyto Whitening)</div>
-                    <div class="product-price">Rp 75.000</div>
-                    <button class="btn-action" onclick="buyProduct('Scarlett Brightly Ever After Serum', 75000, 'scarlett_serum.png')">Beli Sekarang</button>
-                </div>
-
-                <!-- Produk 6 -->
-                <div class="product-card">
-                    <img src="grace and glow hair .jpeg" alt="Grace and Glow Hair Mist" onerror="this.src='https://via.placeholder.com/130x130/ff69b4/ffffff?text=Grace%26Glow+Mist'">
-                    <div class="product-title">Grace and Glow Peony Blush Heat Care Hair Mist</div>
-                    <div class="product-price">Rp 64.000</div>
-                    <button class="btn-action" onclick="buyProduct('Grace and Glow Hair Mist', 64000, 'grace_hair_mist.png')">Beli Sekarang</button>
-                </div>
-
-                <!-- Produk 7 -->
-                <div class="product-card">
-                    <img src="g2g retinol.jpeg" alt="Glad2Glow Retinol" onerror="this.src='https://via.placeholder.com/130x130/ffe4e1/ffffff?text=G2G+Retinol'">
-                    <div class="product-title">Glad2Glow Peach Retinol Serum Intensive Acne Care</div>
-                    <div class="product-price">Rp 39.000</div>
-                    <button class="btn-action" onclick="buyProduct('Glad2Glow Peach Retinol Serum', 39000, 'g2g_retinol.png')">Beli Sekarang</button>
-                </div>
-
-                <!-- Produk 8 -->
-                <div class="product-card">
-                    <img src="g2g facial.jpeg" alt="Glad2Glow Cleanser" onerror="this.src='https://via.placeholder.com/130x130/ffffff/ff69b4?text=G2G+Cleanser'">
-                    <div class="product-title">Glad2Glow Milk Amino Acids Gentle Cleanser 80g</div>
-                    <div class="product-price">Rp 35.000</div>
-                    <button class="btn-action" onclick="buyProduct('Glad2Glow Milk Amino Acids Cleanser', 35000, 'g2g_cleanser.png')">Beli Sekarang</button>
-                </div>
-
-                <!-- Produk 9 -->
-                <div class="product-card">
-                    <img src="g2g mois.jpeg" alt="Glad2Glow Moisturizer Jar" onerror="this.src='https://via.placeholder.com/130x130/ffb7c5/ffffff?text=G2G+Moist+Jar'">
-                    <div class="product-title">Glad2Glow Pomegranate Brightening Moisturizer 30g</div>
-                    <div class="product-price">Rp 43.000</div>
-                    <button class="btn-action" onclick="buyProduct('Glad2Glow Pomegranate Moisturizer 30g', 43000, 'g2g_moisturizer_jar.png')">Beli Sekarang</button>
-                </div>
-
-                <!-- Produk 10 -->
-                <div class="product-card">
-                    <img src="g2g braight.jpeg" alt="Glad2Glow Moisturizer Pump" onerror="this.src='https://via.placeholder.com/130x130/ffb7c5/ffffff?text=G2G+Moist+Pump'">
-                    <div class="product-title">Glad2Glow Pomegranate Brightening Moisturizer 100g</div>
-                    <div class="product-price">Rp 79.000</div>
-                    <button class="btn-action" onclick="buyProduct('Glad2Glow Pomegranate Moisturizer 100g', 79000, 'g2g_moisturizer_pump.png')">Beli Sekarang</button>
-                </div>
-
-                <!-- Produk 11 -->
-                <div class="product-card">
-                    <img src="wardah sun.jpeg" alt="Wardah Sunscreen" onerror="this.src='https://via.placeholder.com/130x130/ffb7c5/ffffff?text=Wardah+Sunscreen'">
-                    <div class="product-title">Wardah UV Shield Essential Gel Sunscreen Serum SPF 35</div>
-                    <div class="product-price">Rp 40.000</div>
-                    <button class="btn-action" onclick="buyProduct('Wardah UV Shield Essential Gel Sunscreen Serum SPF 35', 40000, 'wardah_sunscreen.png')">Beli Sekarang</button>
-                </div>
-
-                <!-- Produk 12 -->
-                <div class="product-card">
-                    <img src="wardah lip 1.jpeg" alt="Wardah Lip Mousse" onerror="this.src='https://via.placeholder.com/130x130/ff69b4/ffffff?text=Wardah+Lip+Mousse'">
-                    <div class="product-title">Wardah Colorfit Velvet Matte Lip Mousse (Red Pioneer)</div>
-                    <div class="product-price">Rp 82.500</div>
-                    <button class="btn-action" onclick="buyProduct('Wardah Colorfit Velvet Matte Lip Mousse', 82500, 'wardah_lip_mousse.png')">Beli Sekarang</button>
-                </div>
-
             </div>
         </div>
 
-        <!-- VIEW 2: PLACE ORDER / CHECKOUT -->
-        <div id="view-checkout" class="view">
-            <h2 class="section-title">Place Order / Checkout</h2>
-            <div class="checkout-box">
-                <div class="checkout-img">
-                    <img id="chk-img" src="bnb 1.jpeg" alt="Product Image" onerror="this.src='https://via.placeholder.com/200x200/ffb7c5/ffffff?text=Product'">
+        <!-- ================= SCREEN 2: SHOP ================= -->
+        <div id="screen-shop" class="app-screen">
+            <div class="shop-content">
+                <div class="products-grid" id="product-list-container">
+                    <!-- Produk di-render dinamis oleh JavaScript -->
                 </div>
-                <div class="checkout-details">
-                    <h3 id="chk-title">barenbliss Peach Make Perfect Lip Tint</h3>
-                    <div class="price-tag" id="chk-price">Rp 72.900</div>
-                    
-                    <div class="info-row"><strong>Alamat Pengiriman:</strong> Peachick, Manado, North Sulawesi, Indonesia</div>
-                    <div class="info-row"><strong>Biaya Ongkir:</strong> Rp 50.000</div>
-                    <div class="info-row"><strong class="total-text">Total Pembayaran: <span id="chk-total">Rp 122.900</span></strong></div>
+            </div>
+        </div>
 
-                    <div class="payment-section">
-                        <strong>Pilih Metode Pembayaran:</strong>
-                        <div class="payment-methods">
-                            <button class="pay-btn selected" onclick="selectPayment('BRI')">BRI</button>
-                            <button class="pay-btn" onclick="selectPayment('BCA')">BCA</button>
-                            <button class="pay-btn" onclick="selectPayment('Mandiri')">Mandiri</button>
-                            <button class="pay-btn" onclick="selectPayment('BNI')">BNI</button>
+        <!-- ================= SCREEN 3: DETAIL PRODUK ================= -->
+        <div id="screen-detail" class="app-screen">
+            <div class="detail-wrapper">
+                <div class="inner-pink-container">
+                    <div class="detail-card" id="detail-card-dynamic">
+                        <!-- Konten detail produk di-render dinamis -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= SCREEN 4: CART ================= -->
+        <div id="screen-cart" class="app-screen">
+            <div class="detail-wrapper">
+                <div class="inner-pink-container">
+                    <div class="cart-inner-box">
+                        <div id="cart-items-list">
+                            <!-- List barang keranjang -->
+                        </div>
+                        
+                        <div class="total-box">
+                            <span>TOTAL :</span>
+                            <span id="cart-total-price">Rp. 0</span>
+                        </div>
+
+                        <div class="cart-footer">
+                            <button class="btn-navy" onclick="navigateTo('payment-method')">Check Out</button>
                         </div>
                     </div>
-
-                    <button class="btn-action btn-checkout" onclick="processOrder()">Place Order</button>
                 </div>
             </div>
         </div>
 
-        <!-- VIEW 3: RECEIPT -->
-        <div id="view-receipt" class="view">
-            <div class="receipt">
-                <div class="receipt-header">Receipt</div>
-                <div class="receipt-sub-header">
-                    <div>
-                        <strong>M2D, Jakarta Selatan, Indonesia</strong><br>
-                        Tujuan: Peachick, Manado, Sulawesi Utara
+        <!-- ================= SCREEN 5: PAYMENT METHOD ================= -->
+        <div id="screen-payment-method" class="app-screen">
+            <div class="detail-wrapper">
+                <div class="inner-pink-container">
+                    <div class="cart-inner-box">
+                        <div class="payment-title">Payment Method</div>
+                        
+                        <div class="payment-layout">
+                            <!-- Bagian Kiri: Formulir -->
+                            <div>
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" id="pay-name" class="form-input" value="Peachick">
+                                </div>
+                                <div class="form-group">
+                                    <label>Number Card</label>
+                                    <input type="text" id="pay-card" class="form-input" value="542792348102">
+                                </div>
+                                <div class="form-row-2">
+                                    <div class="form-group">
+                                        <label>CVV</label>
+                                        <input type="text" id="pay-cvv" class="form-input" value="123">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Expired Date</label>
+                                        <input type="text" id="pay-expiry" class="form-input" value="12/29">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bagian Kanan: Pilihan Bank -->
+                            <div class="bank-options-container">
+                                <label style="font-weight: bold; font-size: 14px;">Bank</label>
+                                <div class="bank-grid">
+                                    <div class="bank-card selected" onclick="selectBank(this, 'BRI')">BRI</div>
+                                    <div class="bank-card" onclick="selectBank(this, 'BCA')">BCA</div>
+                                    <div class="bank-card" onclick="selectBank(this, 'Mandiri')">Mandiri</div>
+                                    <div class="bank-card" onclick="selectBank(this, 'BNI')">BNI</div>
+                                </div>
+                            </div>
+
+                            <!-- Tombol Konfirmasi -->
+                            <div class="payment-footer">
+                                <button class="btn-navy" style="padding: 12px 60px;" onclick="processPayment()">Continue</button>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="receipt-id">
-                        <strong>Order ID:</strong> 0164**********<br>
-                        <strong>Tanggal:</strong> <span id="receipt-date">13/07/2026</span>
-                    </div>
-                </div>
-
-                <table class="receipt-table">
-                    <thead>
-                        <tr>
-                            <th>Deskripsi Item</th>
-                            <th>Harga Satuan</th>
-                            <th>Jumlah</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="rcp-title">barenbliss Peach Make Perfect Lip Tint</td>
-                            <td id="rcp-price">Rp 72.900</td>
-                            <td>1</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="receipt-summary">
-                    <div>Total Item: <span id="rcp-subtotal">Rp 72.900</span></div>
-                    <div>Ongkos Kirim: Rp 50.000</div>
-                    <div class="receipt-total-pay">Total Bayar: <span id="rcp-total">Rp 122.900</span></div>
-                </div>
-
-                <div class="receipt-footer">
-                    <div>Metode Pembayaran: <strong id="rcp-method">BRI</strong></div>
-                    <div>Status Pembayaran: <span class="status-success">SUCCESSFULL</span></div>
                 </div>
             </div>
         </div>
+
+        <!-- ================= SCREEN 6: RECEIPT ================= -->
+        <div id="screen-receipt" class="app-screen">
+            <div class="detail-wrapper">
+                <div class="inner-pink-container">
+                    <div class="receipt-inner-box">
+                        <div class="receipt-title">Receipt</div>
+                        
+                        <div class="receipt-header-info">
+                            <div>
+                                <strong>M2D,</strong><br>
+                                Jakarta Selatan, Indonesia<br><br>
+                                <strong>Delivery Address</strong><br>
+                                <span id="receipt-delivery-name">Peachick</span><br>
+                                Manado, North Sulawesi, Indonesia
+                            </div>
+                            <div>
+                                <strong>Receipt number:</strong> <span id="receipt-no">4298112233</span><br>
+                                <strong>Receipt date:</strong> <span class="current-date-time">-</span><br><br>
+                                <strong>Order Information</strong><br>
+                                Order number: <span id="receipt-order-no">-</span><br>
+                                Order date: <span class="current-date-time">-</span>
+                            </div>
+                        </div>
+
+                        <table class="receipt-table">
+                            <thead>
+                                <tr>
+                                    <th>Item Description</th>
+                                    <th>Unit Price</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody id="receipt-table-body">
+                                <!-- List Item Terbeli -->
+                            </tbody>
+                        </table>
+
+                        <div class="receipt-summary-sec">
+                            <div>
+                                <p>Payment Method: <strong id="receipt-bank-target">Bank BRI</strong></p>
+                                <p style="margin-top: 5px;">Payment Status: <span class="status-badge">SUCCESSFULL</span></p>
+                            </div>
+                            <div class="receipt-totals">
+                                <p>Total Items: <span id="receipt-subtotal">Rp. 0</span></p>
+                                <p>Shipping Charges: <strong>Rp. 50.000</strong></p>
+                                <p style="font-size: 15px; margin-top: 5px;"><strong>Total Amount: <span id="receipt-grandtotal">Rp. 0</span></strong></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION UTILITY UTK BACK / ARROW BAWAH -->
+        <div class="bottom-utility-bar">
+            <div class="btn-back-arrow" onclick="goBack()">↩</div>
+            <div class="shop-pagination">
+                <span class="btn-arrow-indicator">◀</span>
+                <span class="btn-arrow-indicator">▶</span>
+            </div>
+            <div class="hamburger-menu">☰</div>
+        </div>
+
     </div>
 
-    <!-- Menghubungkan ke file JS (Pastikan file script.js ada di folder yang sama) -->
+    <!-- Menghubungkan ke file JavaScript eksternal -->
     <script src="script.js"></script>
 </body>
 </html>
