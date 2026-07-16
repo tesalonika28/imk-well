@@ -1,16 +1,16 @@
 // 1. DATA PRODUK KOSMETIK
 const productsData = [
-    { id: 1, brand: 'barenbliss', name: 'Peach Makes Perfect Lip Tint', price: 72900, rating: 4.6, type: 'color', variants: ['Paradise Found', 'Pretty Please', 'Brave Enough', 'Peace Out', 'Stay Classy'], defaultVar: 'Paradise Found', img: 'https://picsum.photos/seed/liptint/150' },
-    { id: 2, brand: 'Glad2Glow', name: 'Pomegranate Niacinamide Brightening Moisturizer', price: 99000, rating: 4.8, type: 'size', variants: ['30gr', '100gr', '100gr (Pump)'], defaultVar: '100gr', img: 'https://picsum.photos/seed/moist/150' },
-    { id: 3, brand: 'Glad2Glow', name: 'Milk Amino Acids Gentle Cleanser', price: 42900, rating: 4.9, type: 'size', variants: ['80gr'], defaultVar: '80gr', img: 'https://picsum.photos/seed/cleanser/150' },
-    { id: 4, brand: 'Glad2Glow', name: 'PDRN 10% Niacinamide 3% TXA Brightening Serum', price: 49000, rating: 4.9, type: 'size', variants: ['20gr'], defaultVar: '20gr', img: 'https://picsum.photos/seed/serum1/150' },
-    { id: 5, brand: 'Grace and Glow', name: 'Hair Mist', price: 43000, rating: 4.7, type: 'size', variants: ['100ml'], defaultVar: '100ml', img: 'https://picsum.photos/seed/hair/150' },
-    { id: 6, brand: 'Grace and Glow', name: 'Brights Glow Body Serum', price: 92000, rating: 4.7, type: 'size', variants: ['300ml'], defaultVar: '300ml', img: 'https://picsum.photos/seed/body/150' },
-    { id: 7, brand: 'Scarlett', name: 'Scarlett Whitening Brightly Serum', price: 75000, rating: 4.5, type: 'size', variants: ['15ml'], defaultVar: '15ml', img: 'https://picsum.photos/seed/scarlett1/150' },
-    { id: 8, brand: 'Scarlett', name: 'Scarlett Body Lotion Tube Jolly', price: 49000, rating: 4.8, type: 'size', variants: ['180ml'], defaultVar: '180ml', img: 'https://picsum.photos/seed/lotion/150' },
-    { id: 9, brand: 'Emina', name: 'Bright Stuff Loose Powder', price: 29500, rating: 4.6, type: 'size', variants: ['55g'], defaultVar: '55g', img: 'https://picsum.photos/seed/powder/150' },
-    { id: 10, brand: 'Wardah', name: 'Colorfit Velvet Matte Lip Mousse', price: 82500, rating: 4.6, type: 'color', variants: ['Red Pioneer', 'Joyful Orange', 'Cherish Marmalade', 'Chic Terracotta'], defaultVar: 'Red Pioneer', img: 'https://picsum.photos/seed/wardahlipped/150' },
-    { id: 11, brand: 'Wardah', name: 'UV Shield Essential Gel Sunscreen Serum SPF 35', price: 40000, rating: 4.6, type: 'size', variants: ['40ml'], defaultVar: '40ml', img: 'https://picsum.photos/seed/sunscreen/150' }
+    { id: 1, brand: 'barenbliss', name: 'Peach Makes Perfect Lip Tint', price: 72900, rating: 4.6, type: 'color', variants: ['Paradise Found', 'Pretty Please', 'Brave Enough', 'Peace Out', 'Stay Classy'], defaultVar: 'Paradise Found', img: 'barenbliss1.png' },
+    { id: 2, brand: 'Glad2Glow', name: 'Pomegranate Niacinamide Brightening Moisturizer', price: 99000, rating: 4.8, type: 'size', variants: ['30gr', '100gr', '100gr (Pump)'], defaultVar: '100gr', img: 'g2g2.png' },
+    { id: 3, brand: 'Glad2Glow', name: 'Milk Amino Acids Gentle Cleanser', price: 42900, rating: 4.9, type: 'size', variants: ['80gr'], defaultVar: '80gr', img: 'g2g1.png' },
+    { id: 4, brand: 'Glad2Glow', name: 'PDRN 10% Niacinamide 3% TXA Brightening Serum', price: 49000, rating: 4.9, type: 'size', variants: ['20gr'], defaultVar: '20gr', img: 'g2g4.png' },
+    { id: 5, brand: 'Grace and Glow', name: 'Hair Mist', price: 43000, rating: 4.7, type: 'size', variants: ['100ml'], defaultVar: '100ml', img: 'graceglow2.png' },
+    { id: 6, brand: 'Grace and Glow', name: 'Brights Glow Body Serum', price: 92000, rating: 4.7, type: 'size', variants: ['300ml'], defaultVar: '300ml', img: 'graceglow1.png' },
+    { id: 7, brand: 'Scarlett', name: 'Scarlett Whitening Brightly Serum', price: 75000, rating: 4.5, type: 'size', variants: ['15ml'], defaultVar: '15ml', img: 'scarlett1.png' },
+    { id: 8, brand: 'Scarlett', name: 'Scarlett Body Lotion Tube Jolly', price: 49000, rating: 4.8, type: 'size', variants: ['180ml'], defaultVar: '180ml', img: 'scarlett2.png' },
+    { id: 9, brand: 'Emina', name: 'Bright Stuff Loose Powder', price: 29500, rating: 4.6, type: 'size', variants: ['55g'], defaultVar: '55g', img: 'emina1.png' },
+    { id: 10, brand: 'Wardah', name: 'Colorfit Velvet Matte Lip Mousse', price: 82500, rating: 4.6, type: 'color', variants: ['Red Pioneer', 'Joyful Orange', 'Cherish Marmalade', 'Chic Terracotta'], defaultVar: 'Red Pioneer', img: 'wardah1.png' },
+    { id: 11, brand: 'Wardah', name: 'UV Shield Essential Gel Sunscreen Serum SPF 35', price: 40000, rating: 4.6, type: 'size', variants: ['40ml'], defaultVar: '40ml', img: 'wardah2.png' }
 ];
 
 // State Manajemen Aplikasi
