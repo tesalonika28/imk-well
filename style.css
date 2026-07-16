@@ -604,9 +604,3 @@ body {
     color: #1a237e;
     user-select: none;
 }
-
-.hamburger-menu {
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-}
